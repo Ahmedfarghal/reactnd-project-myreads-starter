@@ -43,7 +43,7 @@ class Search extends Component {
     const { books } = this.state;
     let changeBook = this.props.changeBook;
     
-    if (this.state.books != books) {
+    if (this.state.books !== books) {
       this.setState({ books });
     } else {
       return books.error
