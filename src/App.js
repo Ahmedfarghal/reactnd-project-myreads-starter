@@ -29,7 +29,6 @@ class App extends Component {
   //change the book and self place 
   changeBook = (book, shelf) => {
     if (!this.state.books) {
-      //console.log(this.state)
       BooksAPI.update(book, shelf)
         .then(() => (shelf !== 'none' ? this.context.router.history.push('/') : null))
         .catch(() => alert('Something went wrong! Please try again!'));
